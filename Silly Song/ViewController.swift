@@ -23,7 +23,8 @@ func shortNameFromName(name: String) -> String {
     let vowelSet = CharacterSet(charactersIn: "aeiou")
     var result = lowercaseName
     
-    if(result.folding(options: .diacriticInsensitive, locale: .current).rangeOfCharacter(from: vowelSet) == nil){
+    if(result.folding(options: .diacriticInsensitive, locale: .current)
+        .rangeOfCharacter(from: vowelSet) == nil){
         return result
     }
     
